@@ -1,0 +1,223 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    tools:context="in.care.ac.caregroupofinstitutions.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:foregroundGravity="center"
+            android:layout_gravity="center_vertical"
+
+            android:layout_marginBottom="15dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/grad"
+                    android:id="@+id/backimg"/>
+                <RelativeLayout
+                    android:id="@+id/imgUser"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerHorizontal="false"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/circle_border">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_margin="9dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/circle"
+                        android:padding="3dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_user" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/nameprofile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_toEndOf="@id/imgUser"
+                    android:layout_marginStart="15dp"
+                    android:maxLines="1"
+                    android:maxWidth="220dp"
+                    android:foregroundGravity="center_vertical|center"
+                    android:gravity="center|center_vertical"
+                    android:text="Name"
+                    android:textColor="@color/primaryDark"
+                    android:textSize="28sp" />
+
+
+                <TextView
+                    android:id="@+id/branchprofile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nameprofile"
+                    android:fontFamily="sans-serif"
+                    android:layout_toEndOf="@id/imgUser"
+                    android:layout_marginStart="15dp"
+                    android:text="Computer science, BE"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/address"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_settings" />
+
+
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_weight="7.5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:foregroundGravity="center_vertical|bottom|center"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            >
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/attendanceprofile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp">
+                            <ImageView
+                                android:id="@+id/profileimg1"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:src="@drawable/attendance_profile"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:text="Attendance"
+                                android:layout_marginLeft="30dp"
+                                android:layout_toEndOf="@+id/profileimg1"
+                                android:textColor="@color/address"
+                                android:gravity="left|center|center_vertical"
+                                android:textSize="24sp"
+                                />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/grey" />
+                        <RelativeLayout
+                            android:id="@+id/examprofile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp">
+                            <ImageView
+                                android:id="@+id/profileimg2"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:src="@drawable/exam_profile"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:layout_toEndOf="@+id/profileimg2"
+                                android:layout_marginLeft="30dp"
+                                android:text="Marks"
+                                android:textColor="@color/address"
+                                android:gravity="left|center|center_vertical"
+                                android:textSize="24sp"
+                                />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/grey" />
+                        <RelativeLayout
+                            android:id="@+id/scheduleprofile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_gravity="center">
+                            <ImageView
+                                android:id="@+id/profileimg3"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:src="@drawable/schedule_profile"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:text="Schedule"
+                                android:layout_toEndOf="@id/profileimg3"
+                                android:textColor="@color/address"
+                                android:gravity="left|center|center_vertical"
+                                android:layout_marginLeft="30dp"
+                                android:textSize="24sp"
+                                />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/grey" />
+
+                    </LinearLayout>
+                </ScrollView>
+
+            </FrameLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</RelativeLayout>
